@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    EditText text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnClick(View v){
+        text = (EditText) findViewById(R.id.editName);
+        String name = text.getText().toString();
         Intent intent = new Intent(this, GamingActivity.class);
+        intent.putExtra("Name", name);
         startActivity(intent);
     }
 }
