@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         img2 = findViewById(R.id.Image1);
 
         Random rand = new Random();
-        image1Num = rand.nextInt(5) +1;
-        image2Num = rand.nextInt(5) +1;
+        image1Num = rand.nextInt(6) +1;
 
         img1.setImageResource(arr[image1Num]);
         img2.setImageResource(arr[image2Num]);
