@@ -2,6 +2,7 @@ package com.example.exampractice;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class Game extends AppCompatActivity {
 
@@ -9,5 +10,9 @@ public class Game extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+    }
+
+    public void TakePicture(View v){
+
     }
 }
