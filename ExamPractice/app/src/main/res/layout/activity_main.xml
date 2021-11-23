@@ -53,6 +53,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Signup"
         android:text="Not a Member? Sign up"
         android:textColor="#000000"
         android:textSize="18sp"
