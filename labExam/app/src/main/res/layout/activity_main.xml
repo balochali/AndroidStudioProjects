@@ -72,6 +72,7 @@
         android:layout_height="56dp"
         android:backgroundTint="#000000"
         android:fontFamily="casual"
+        android:onClick="Play"
         android:shadowColor="#370D0D"
         android:text="Play"
         android:textSize="18sp"
