@@ -77,7 +77,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         img.setImageResource(arr[random-1]);
 
-        if((PlayerOneCheck == true) && (PlayerOneStand == false)){
+        if((PlayerOneCheck == true) && (PlayerOneStand == false) && PlayerOneCount < 21){
             if(random > 9 && random < 13){
                 PlayerOneCount += 10;
             }
@@ -94,7 +94,7 @@ public class MainActivity2 extends AppCompatActivity {
 
             WhoIsPlaying.setText(PlayerTwoName + " Turns");
         }
-        else if ((PlayerTwoCheck == true)&& (PlayerTwoStand == false)){
+        else if ((PlayerTwoCheck == true)&& (PlayerTwoStand == false) && PlayerTwoCount < 21){
             if(random > 9 && random < 13){
                 PlayerTwoCount += 10;
             }
@@ -110,7 +110,6 @@ public class MainActivity2 extends AppCompatActivity {
             PlayerTwoScore.setText(PlayerTwoName+ " Score is: "+PlayerTwoCount);
             WhoIsPlaying.setText(PlayerOneName + " Turns");
         }
-
     }
 
     public void onStand(View v){
