@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:foregroundGravity="center"
-    android:paddingLeft="20fp"
+    android:paddingLeft="20dp"
     app:layout_anchorGravity="center"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="411dp"
         android:layout_height="62dp"
         android:background="#000000"
@@ -33,4 +34,55 @@
             android:textSize="46dp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/EditPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Name of Player 1"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <EditText
+        android:id="@+id/EditPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Name of Player 2"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="273dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="casual"
+        android:shadowColor="#370D0D"
+        android:text="Play"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditPlayer1"
+        app:layout_constraintVertical_bias="0.458"
+        app:strokeColor="#C51010" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
