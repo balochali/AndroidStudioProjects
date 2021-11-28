@@ -26,8 +26,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     ImageView img;
 
-    int PlayerOneCount;
-    int PlayerTwoCount;
+    int PlayerOneCount = 0;
+    int PlayerTwoCount = 0;
 
     int [] arr = new int[13];
 
@@ -47,7 +47,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         PlayerOneScore.setText(PlayerOneName + " Score: ");
         PlayerTwoScore.setText(PlayerTwoName + " Score: ");
-        WhoIsPlaying.setText(PlayerOneName + " is Playing");
+        WhoIsPlaying.setText(PlayerOneName + " Turns");
 
         PlayerOneCheck = false;
         PlayerTwoCheck = true;
@@ -77,5 +77,49 @@ public class MainActivity2 extends AppCompatActivity {
 
         img.setImageResource(arr[random-1]);
 
+        if((PlayerOneCheck == true) && (PlayerOneStand == false)){
+            if(random > 9 && random < 13){
+                PlayerOneCount += 10;
+            }
+            else if(random == 13){
+                PlayerOneCount += 11;
+            }
+            else{
+                PlayerOneCount += random;
+            }
+            PlayerOneCheck = false;
+            PlayerTwoCheck = true;
+
+            PlayerOneScore.setText(PlayerOneName + " Score is: "+PlayerOneCount);
+
+            WhoIsPlaying.setText(PlayerTwoName + " Turns");
+        }
+        else if ((PlayerTwoCheck == true)&& (PlayerTwoStand == false)){
+            if(random > 9 && random < 13){
+                PlayerTwoCount += 10;
+            }
+            else if(random == 13){
+                PlayerTwoCount += 11;
+            }
+            else{
+                PlayerTwoCount += random;
+            }
+            PlayerOneCheck = true;
+            PlayerTwoCheck = false;
+
+            PlayerTwoScore.setText(PlayerTwoName+ " Score is: "+PlayerTwoCount);
+            WhoIsPlaying.setText(PlayerOneName + " Turns");
+        }
+
+    }
+
+    public void onStand(View v){
+        if(PlayerOneCheck == true && PlayerTwoCheck == false){
+            PlayerOneStand = true;
+        }
+
+        else if(PlayerOneCheck == false && PlayerTwoCheck == true){
+            PlayerTwoStand = true;
+        }
     }
 }
